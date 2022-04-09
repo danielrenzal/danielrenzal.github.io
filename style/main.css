@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  color: #1f1f1f;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #1f1f1f;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 120%;
+  margin: 1em 20vw 1em 6vw;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  position: relative;
+}
+
+h1::before {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 1.5em;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#38c9c9), to(#1CA7EC));
+  background-image: linear-gradient(to bottom right, #38c9c9, #1CA7EC);
+  bottom: 0;
+  left: .85em;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  margin-bottom: .5em;
+  font-size: 2rem;
+  position: relative;
+}
+
+h2::before {
+  position: absolute;
+  content: '';
+  height: 3px;
+  width: 1.5em;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#38c9c9), to(#1CA7EC));
+  background-image: linear-gradient(to bottom right, #38c9c9, #1CA7EC);
+  bottom: 0;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h3, h4, h5 {
+  font-family: 'Oswald', sans-serif;
+}
+
+header nav {
+  text-align: right;
+  padding: min(6vw, 2em) 6vw;
+}
+
+header ul {
+  display: none;
+}
+
+header ul a {
+  opacity: 0;
+}
+
+header ul a:hover {
+  font-style: italic;
+  position: relative;
+}
+
+header ul a:hover::before {
+  content: '::';
+  color: #1CA7EC;
+}
+
+header ul.mobile {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+header .mobile-menu-btn {
+  margin-top: min(6vw, 2em);
+  border: none;
+  background: none;
+  -webkit-animation: floatingIcon 1s infinite alternate ease-in-out;
+          animation: floatingIcon 1s infinite alternate ease-in-out;
+}
+
+header .mobile-menu-btn svg {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  pointer-events: none;
+  -webkit-transition: ease-in-out .3s all;
+  transition: ease-in-out .3s all;
+}
+
+@-webkit-keyframes floatingIcon {
+  0% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes floatingIcon {
+  0% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+header .mobile-menu-btn svg.clicked {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+section {
+  padding: 2em 6vw;
+  display: -ms-grid;
+  display: grid;
+  gap: 6vw;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width: 425px) {
+  section {
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.projects-container {
+  background-color: #f7f7f7;
+}
+
+section.projects {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.projects article {
+  background-color: white;
+  border-radius: 5px;
+  -webkit-transform: translateY(2em);
+          transform: translateY(2em);
+  opacity: 0;
+  -webkit-box-shadow: #d1d1d1 1px 1px 8px;
+          box-shadow: #d1d1d1 1px 1px 8px;
+}
+
+section.projects img {
+  border-bottom: 1px solid #1f1f1f;
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  image-rendering: auto;
+}
+
+section.projects .description {
+  padding: 1em;
+  text-align: justify;
+  display: -ms-grid;
+  display: grid;
+  gap: 2em;
+}
+
+section.projects .description h3 {
+  font-size: 1.5em;
+}
+
+section.projects .buttons-container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  gap: 1em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.projects button {
+  padding: .8em 1.5em;
+  background-color: #1f1f1f;
+  border: none;
+  border-radius: 5px;
+}
+
+section.projects button a {
+  display: block;
+  color: white;
+  width: 100%;
+}
+
+section.projects .tech-used ul {
+  margin-top: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.projects .tech-used ul li {
+  font-size: 14px;
+  border-radius: 24px;
+  border: 1px solid #1f1f1f;
+  padding: .3em .7em;
+}
+
+section.about-contact {
+  gap: 3em;
+}
+
+section.about-contact .about-me .about-info {
+  margin-bottom: 3em;
+  text-align: justify;
+}
+
+section.about-contact form {
+  display: -ms-grid;
+  display: grid;
+  gap: .5em;
+}
+
+section.about-contact form input, section.about-contact form textarea {
+  border: none;
+  padding: .5em;
+  font-size: 1rem;
+  color: #1f1f1f;
+}
+
+section.about-contact form .submit-email {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#38c9c9), to(#1CA7EC));
+  background-image: linear-gradient(to bottom right, #38c9c9, #1CA7EC);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+section.about-contact form .error-email, section.about-contact form .error-subj, section.about-contact form .error-msg {
+  display: none;
+  font-size: 15px;
+  color: #ffe16a;
+  font-style: italic;
+}
+
+.about-contact-container {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.what-i-know ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 1em;
+  text-align: center;
+}
+
+.what-i-know ul li {
+  width: 4em;
+}
+
+.what-i-know ul li img {
+  width: 100%;
+}
+
+footer {
+  padding: 1em 6vw 1.5em;
+}
+
+.footer-container {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding: 6vw 6vw;
+  }
+  section.about-contact {
+    gap: 6vw;
+  }
+  section, header nav, footer {
+    padding-left: 9vw;
+    padding-right: 9vw;
+  }
+  nav, .hero, section, footer {
+    max-width: 125em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  nav .mobile-menu-btn {
+    display: none;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    gap: 2.5em;
+  }
+  h1 {
+    font-size: 5.5rem;
+    margin-left: 9vw;
+  }
+}
+/*# sourceMappingURL=main.css.map */

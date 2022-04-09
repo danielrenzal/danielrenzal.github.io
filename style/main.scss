@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+Pro&display=swap');
+
+$gradientColor: linear-gradient(to bottom right, #38c9c9, #1CA7EC);
+$darkGreyColor: #1f1f1f;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+    color: $darkGreyColor;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: $darkGreyColor;
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 120%;
+    margin: 1em 20vw 1em 6vw;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    position: relative;
+    &::before{
+        position: absolute;
+        content: '';
+        height: 5px;
+        width: 1.5em;
+        background-image: $gradientColor;
+        bottom: 0;
+        left: .85em
+    }
+}
+
+h2{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    margin-bottom: .5em;
+    font-size: 2rem;
+    position: relative;
+    &::before{
+        position: absolute;
+        content: '';
+        height: 3px;
+        width: 1.5em;
+        background-image: $gradientColor;
+        bottom: 0;
+    }
+}
+
+h4{
+    font-size: 1.3rem;
+}
+
+h5{
+    font-size: 1.1rem;
+}
+
+h3, h4, h5{
+    font-family: 'Oswald', sans-serif;
+}
+
+
+header{
+    nav{
+        text-align: right;
+        padding: #{"min(6vw, 2em)"} 6vw;
+    }
+
+    ul{
+        display: none;
+        a{
+            opacity: 0;
+        }
+        a:hover{
+            font-style: italic;
+            position: relative;
+            &::before{
+                content: '::';
+                color: #1CA7EC;
+            }
+        }
+    }
+
+    ul.mobile{
+        display: grid;
+        gap: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    
+    .mobile-menu-btn{
+        margin-top: #{"min(6vw, 2em)"};
+        border: none;
+        background: none;
+        animation: floatingIcon 1s infinite alternate ease-in-out;
+        
+        svg{
+            transform: rotate(90deg);
+            pointer-events: none;
+            transition: ease-in-out .3s all;
+            
+        }
+        @keyframes floatingIcon{
+            0%{
+                transform: translateY(-10px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+        svg.clicked{
+            transform: rotate(270deg);
+        }
+    }
+}
+
+
+section{
+    padding: 2em 6vw;
+    display: grid;
+    gap: 6vw;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width: 425px){
+    section{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+.projects-container{
+    background-color: rgb(247, 247, 247);
+}
+
+section.projects{
+    justify-content: center;
+    article{
+        background-color: white;
+        border-radius: 5px;
+        transform: translateY(2em);
+        opacity: 0;
+        box-shadow: rgb(209, 209, 209) 1px 1px 8px;
+    }
+
+    img{
+        border-bottom: 1px solid $darkGreyColor;
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        object-position: top;
+        image-rendering: auto;
+    }
+
+    .description{
+        padding: 1em;
+        text-align: justify;
+        display: grid;
+        gap: 2em;
+        h3{
+            font-size: 1.5em;
+        }
+    }
+
+    .buttons-container{
+        width: 100%;
+        display: grid;
+        gap: 1em;
+        flex-wrap: wrap;
+    }
+
+    button{
+        padding: .8em 1.5em;
+        background-color: $darkGreyColor;
+        border: none;
+        border-radius: 5px;
+        a{
+            display: block;
+            color: white;
+            width: 100%;
+        }
+    }
+    // .user-capability ul{
+    //     list-style-type: disc;
+    //     margin-left: 1.5em;
+    // }
+    .tech-used ul{
+        margin-top: .5em;
+        display: flex;
+        gap: .5em;
+        flex-wrap: wrap;
+        li{
+            font-size: 14px;
+            border-radius: 24px;
+            border: 1px solid $darkGreyColor;
+            padding: .3em .7em;
+        }
+    }
+}
+
+section.about-contact{
+    gap: 3em;
+    .about-me .about-info{
+        margin-bottom: 3em;
+        text-align: justify;
+    }
+
+    form{
+        display: grid;
+        gap: .5em;
+        input, textarea{
+            border: none;
+            padding: .5em;
+            font-size: 1rem;
+            color: $darkGreyColor;
+        }
+
+        .submit-email{
+            background-image: $gradientColor;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        // .error{
+        //     background-color: rgb(238, 153, 153);
+        //     &::placeholder{
+        //         color: white;
+        //     }
+        // }
+        .error-email, .error-subj, .error-msg{
+            display: none;
+            font-size: 15px;
+            color: rgb(255, 225, 106);
+            font-style: italic;
+        }
+    }
+}
+.about-contact-container{
+    background-color: $darkGreyColor;
+    color: white;
+}
+
+.what-i-know ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1em;
+    text-align: center;
+    li{
+        width: 4em;
+        img{
+            width: 100%;
+        }
+    }
+}
+footer{
+    padding: 1em 6vw 1.5em;
+}
+
+.footer-container{
+    background-color:$darkGreyColor;
+    color: white;
+}
+
+
+@media (min-width:1024px){
+
+    section{
+        padding: 6vw 6vw;
+    }
+
+    section.about-contact{
+        gap: 6vw;
+    }
+
+    section, header nav, footer{
+        padding-left: 9vw;
+        padding-right: 9vw;
+    }
+
+    nav, .hero, section, footer{
+        max-width: 125em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    nav{
+        .mobile-menu-btn{
+            display: none;
+        }
+        ul{
+            display: flex;
+            justify-content: end;
+            gap: 2.5em;
+        }
+            
+    }
+
+    h1{
+        font-size: 5.5rem;
+        margin-left: 9vw;
+    }
+    
+}
