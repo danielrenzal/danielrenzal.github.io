@@ -177,8 +177,6 @@ a{
     background-color: $darkGreyColor;
     color: white;
     .wrapper{
-        grid-template-columns: repeat(auto-fit, minmax(338px, 1fr));
-        // gap: 4em;
         padding: 6vw 6vw #{"calc(6vw - 62px)"};
     }
     .about-me{
@@ -267,12 +265,11 @@ footer{
     }
 }
 
-@media (min-width: 769px){
-    
-    .projects .wrapper article{
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    }
+@media (min-width: 700px){
     .about-contact{
+        .wrapper{
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
         .about-me{
             margin-right: 2em;
         }
@@ -280,6 +277,14 @@ footer{
             margin-left: 2em;
         }
     }
+}
+
+@media (min-width: 768px){
+    
+    .projects .wrapper article{
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+    
 }
 
 @media (min-width: 1024px){

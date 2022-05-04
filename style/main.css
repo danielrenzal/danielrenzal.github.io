@@ -214,8 +214,6 @@ a {
 }
 
 .about-contact .wrapper {
-  -ms-grid-columns: (minmax(338px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(338px, 1fr));
   padding: 6vw 6vw calc(6vw - 62px);
 }
 
@@ -320,16 +318,23 @@ footer .wrapper {
   }
 }
 
-@media (min-width: 769px) {
-  .projects .wrapper article {
-    -ms-grid-columns: (minmax(450px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+@media (min-width: 700px) {
+  .about-contact .wrapper {
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   .about-contact .about-me {
     margin-right: 2em;
   }
   .about-contact .contact-form {
     margin-left: 2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects .wrapper article {
+    -ms-grid-columns: (minmax(450px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
 }
 
