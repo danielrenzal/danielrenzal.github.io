@@ -28,7 +28,7 @@ a{
 }
 
 
-.hero{
+.main-header{
     position: relative;
     .custom-shape-divider-bottom-1651637066 {
         position: absolute;
@@ -56,7 +56,7 @@ a{
         font-family: 'Oswald', sans-serif;
         font-weight: 700;
         line-height: 120%;
-        font-size: #{"min(calc(4rem + 3vw), 8rem)"};
+        font-size: #{"min(calc(4rem + 3vw), 5rem)"};
         clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
         position: relative;
         &::before{
@@ -221,16 +221,21 @@ a{
 
     form{
         display: grid;
-        // gap: .5em;
+        
+        label{
+            margin-top: .5em;
+        }
+
         input, textarea{
             border: none;
             padding: .5em;
-            margin-bottom: .5em;
             font-size: .875rem;
             color: $darkGreyColor;
+            border-radius: 2px;
         }
 
         .submit-email{
+            margin-top: 2em;
             background-image: $gradientColor;
             color: white;
             font-weight: 700;
@@ -249,6 +254,7 @@ a{
 footer{
     background-color:$darkGreyColor;
     color: white;
+    font-size: .875rem;
     .wrapper{
         padding: 1em 6vw 1.5em;
         display: flex;
@@ -288,10 +294,10 @@ footer{
 }
 
 @media (min-width: 1024px){
-    .hero{
+    .main-header{
         padding-top: 2vw;
     }
-    .projects, .hero, footer, .about-contact{
+    .projects, .main-header, footer, .about-contact{
         padding-left: 2vw;
         padding-right: 2vw;
     }
