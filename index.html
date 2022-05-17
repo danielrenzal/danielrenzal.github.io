@@ -8,25 +8,24 @@
     <title>Daniel Renzal</title>
 </head>
 <body>
-    <main>
-        <section class="hero">
-            <div class="wrapper">
-                <h1>Daniel</h1>
-                <nav>
-                    <ul>
-                        <li><a href="index.html#contact">Email</a></li>
-                        <li><a href="assets/resume-daniel-renzal.pdf" download target="_blank" rel="noopener noreferrer">Resume</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <header class="main-header">
+        <div class="wrapper">
+            <h1>Daniel</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#contact">Email</a></li>
+                    <li><a href="assets/resume-daniel-renzal.pdf" download target="_blank" rel="noopener noreferrer">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
 
-            <div class="custom-shape-divider-bottom-1651637066">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-                </svg>
-            </div>
-        </section>
-        
+        <div class="custom-shape-divider-bottom-1651637066">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+    <main>  
         <section class="projects">
             <div class="wrapper">
                 <article>
@@ -107,7 +106,7 @@
                     <div class="about-info">
                         <h2>About me</h2>
                         <p>
-                            I aspire to work as a front end developer. 
+                            I aspire to work as a front end web developer. 
                             I am an information technology graduate who just finished college last 2021. 
                             I have no work experience yet but I made this portfolio website to show
                             what can I do. :)
@@ -128,13 +127,16 @@
                 <div class="contact-form" id="contact">
                     <form>
                         <h2>Email me</h2>
-                        <input type="email" name="email" placeholder="Email address" class="email-input">
+                        <label for="email-input">Email Address</label>
+                        <input type="email" name="email" class="email-input" id="email-input">
                         <p class="error-email">Email empty</p>
 
-                        <input type="text" name="subject" placeholder="Subject" class="subject-input">
+                        <label for="subject-input">Subject</label>
+                        <input type="text" name="subject" class="subject-input" id="subject-input">
                         <p class="error-subj">Subject empty</p>
 
-                        <textarea name="message" id="" cols="30" rows="5" placeholder="Your message here" class="message-input"></textarea>
+                        <label for="message-input">Message</label>
+                        <textarea name="message" id="message-input" cols="30" rows="5" class="message-input"></textarea>
                         <p class="error-msg">Message empty</p>
                         
                         <input type="submit" value="Send" class="submit-email">
