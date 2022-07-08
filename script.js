@@ -71,4 +71,4 @@ let tl = gsap.timeline({defaults: {ease: "power4.inOut"}, duration: .2});
 
 tl.to('h1', {'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', duration: 1})
     .to('article', {y: 0, stagger: .3, opacity: 1,},"-=.5")
-    .to('ul a', { stagger: .1, opacity: 1}, "-=.3")
+    .to('nav a', { stagger: .1, opacity: 1}, "-=.3")
