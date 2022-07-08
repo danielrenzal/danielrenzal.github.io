@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #1f1f1f;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-wrapper {
+  max-width: 75em;
+  margin: auto;
+  padding: 2.5em 6vw;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  font-size: 2rem;
+  position: relative;
+}
+h2::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 1.5em;
+  background-image: linear-gradient(to bottom right, #38c9c9, #1CA7EC);
+  bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .custom-wrapper {
+    padding: 3.5em 6vw;
+  }
+}
+.main-header {
+  position: relative;
+}
+.main-header .custom-shape-divider-bottom-1651637066 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+.main-header .custom-shape-divider-bottom-1651637066 svg {
+  position: relative;
+  display: block;
+  width: calc(115% + 1.3px);
+  height: 90px;
+  transform: rotateY(180deg);
+}
+.main-header .custom-shape-divider-bottom-1651637066 .shape-fill {
+  fill: #FAFAFA;
+}
+.main-header h1 {
+  margin-top: 0.5em;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  line-height: 120%;
+  font-size: min(3rem + 3vw, 5rem);
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  position: relative;
+}
+.main-header h1::before {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 1.235em;
+  background-image: linear-gradient(to bottom right, #38c9c9, #1CA7EC);
+  bottom: 0;
+  left: 6px;
+}
+.main-header nav {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.main-header a {
+  opacity: 0;
+  margin-right: 2em;
+}
+.main-header a:hover {
+  font-style: italic;
+  position: relative;
+}
+.main-header a:hover::before {
+  content: ".::";
+  color: #1CA7EC;
+}
+
+.projects {
+  background-color: #FAFAFA;
+  padding-top: 1.25em;
+  padding-bottom: 6vw;
+}
+.projects .control-btn {
+  width: fit-content;
+}
+.projects .custom-wrapper {
+  padding: 0;
+}
+.projects article {
+  display: grid;
+  margin: 0 6vw 2em;
+  transform: translateY(2em);
+  opacity: 0;
+  background-color: white;
+  box-shadow: 1px 3px 6px rgb(226, 226, 226);
+}
+.projects img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: top;
+  image-rendering: auto;
+  border-bottom: 2px solid #efefef;
+}
+.projects .description {
+  padding: 1em;
+  display: grid;
+  place-content: start;
+}
+.projects .description p {
+  margin-bottom: 1.125em;
+}
+.projects h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.875rem;
+}
+.projects .buttons-container {
+  display: flex;
+}
+.projects .buttons-container a {
+  padding: 0.5em 1em;
+  margin-right: 1em;
+  background-color: #1f1f1f;
+  font-size: 0.875rem;
+  color: white;
+  border-radius: 5px;
+}
+.projects .buttons-container a:nth-child(2) {
+  background-color: transparent;
+  border: 2px solid #1f1f1f;
+  color: #1f1f1f;
+}
+
+@media (min-width: 860px) {
+  .projects article {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-areas: "desc img";
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .projects img {
+    grid-area: img;
+  }
+  .projects .description {
+    grid-area: desc;
+  }
+}
+.about-contact {
+  background-color: #1f1f1f;
+  color: white;
+}
+.about-contact .about-me .about-info {
+  max-width: 70ch;
+  text-align: left;
+}
+.about-contact .about-me .about-info p {
+  margin-bottom: 1em;
+}
+.about-contact .what-i-know ul {
+  width: fit-content;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.about-contact .what-i-know ul li {
+  margin-top: 1em;
+  margin-right: 1em;
+  margin-left: 0;
+}
+.about-contact .what-i-know ul li img {
+  width: 3em;
+}
+.about-contact .what-i-know ul li p {
+  font-size: 0.875rem;
+  margin: 0;
+}
+.about-contact .what-i-know ul .jquery-logo {
+  background-color: rgb(211, 211, 211);
+  width: 8em;
+  padding: 0.2em;
+}
+
+@media (min-width: 768px) {
+  .about-me .what-i-know {
+    text-align: right;
+  }
+  .about-me .what-i-know ul {
+    margin-left: auto;
+  }
+  .about-me .what-i-know ul li {
+    margin-right: 0;
+    margin-left: 1em;
+  }
+}
+footer {
+  background-color: white;
+  color: #1f1f1f;
+  font-size: 0.875rem;
+}
+footer form {
+  text-align: left;
+  display: grid;
+}
+footer form label {
+  margin-top: 0.5em;
+  display: block;
+}
+footer form input, footer form textarea {
+  border: none;
+  padding: 0.5em;
+  font-size: 0.875rem;
+  color: #1f1f1f;
+  border-radius: 2px;
+  background-color: rgb(233, 233, 233);
+  width: 100%;
+}
+footer form .submit-email {
+  margin-top: 2em;
+  background-image: linear-gradient(to bottom right, #38c9c9, #1CA7EC);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+footer form .error-email, footer form .error-subj, footer form .error-msg {
+  display: none;
+  font-size: 15px;
+  color: rgb(255, 184, 152);
+  font-style: italic;
+}
+footer .credit {
+  margin-top: 2em;
+}
+
+@media (min-width: 600px) {
+  footer form div {
+    display: flex;
+  }
+  footer form div span {
+    width: 100%;
+  }
+  footer form div span:first-child {
+    margin-right: 0.8em;
+  }
+  footer form div span:last-child {
+    margin-left: 0.8em;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

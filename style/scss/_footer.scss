@@ -1,0 +1,68 @@
+@use 'variables';
+
+footer{
+    background-color: white;
+    color: variables.$darkGreyColor;
+    font-size: .875rem;
+
+    form{
+        text-align: left;
+        display: grid;
+
+        label{
+            margin-top: .5em;
+            display: block;
+        }
+
+        input, textarea{
+            border: none;
+            padding: .5em;
+            font-size: .875rem;
+            color: variables.$darkGreyColor;
+            border-radius: 2px;
+            background-color: rgb(233, 233, 233);
+            width: 100%;
+        }
+
+        .submit-email{
+            margin-top: 2em;
+            background-image: variables.$gradientColor;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .error-email, .error-subj, .error-msg{
+            display: none;
+            font-size: 15px;
+            color: rgb(255, 184, 152);
+            font-style: italic;
+        }
+    }
+
+    .credit{
+        margin-top: 2em;
+    }
+    
+}
+
+
+
+@media (min-width: 600px){
+
+    footer form{
+        div{
+            display: flex;
+        }
+    
+        div span{
+            width: 100%;
+            &:first-child{
+                margin-right: .8em;
+            }
+            &:last-child{
+                margin-left: .8em;
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@use 'variables';
+
+.about-contact {
+    background-color: variables.$darkGreyColor;
+    color: white;
+
+    .about-me{
+        .about-info{
+            max-width: 70ch;
+            text-align: left;
+
+            p{
+                margin-bottom: 1em;
+            }
+        }
+    }
+    
+    .what-i-know {
+        ul{
+            width: fit-content;
+            display: flex;
+            text-align: center;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            li{
+                margin-top: 1em;
+                margin-right: 1em;
+                margin-left: 0;
+                img{
+                    width: 3em;
+                }
+                p{
+                    font-size: .875rem;
+                    margin: 0;
+                }
+            }
+            .jquery-logo{
+                background-color: rgb(211, 211, 211);
+                width: 8em;
+                padding: .2em;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 768px){
+
+    .about-me{
+        .what-i-know{
+            text-align: right;
+
+            ul{
+                margin-left: auto;
+
+                li{
+                    margin-right: 0;
+                    margin-left: 1em;
+                }
+            }
+        }
+    }
+}
