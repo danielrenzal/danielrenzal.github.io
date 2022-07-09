@@ -8,7 +8,6 @@
         .about-info{
             max-width: 70ch;
             text-align: left;
-
             p{
                 margin-bottom: 1em;
             }
@@ -22,8 +21,9 @@
             text-align: center;
             flex-wrap: wrap;
             align-items: flex-end;
+            margin-bottom: 1em;
             li{
-                margin-top: 1em;
+                margin-top: .875em;
                 margin-right: 1em;
                 margin-left: 0;
                 img{
@@ -47,15 +47,19 @@
 @media (min-width: 768px){
 
     .about-me{
+        .about-info{
+            margin-bottom: 5em;
+        }
+
         .what-i-know{
             text-align: right;
-
             ul{
                 margin-left: auto;
 
                 li{
                     margin-right: 0;
                     margin-left: 1em;
+                    margin-top: 0;
                 }
             }
         }

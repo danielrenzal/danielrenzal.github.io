@@ -1,24 +1,19 @@
 @use 'variables';
 
 .projects{
-    background-color: #FAFAFA;
-    padding-top: 1.250em;
-    padding-bottom: 6vw;
+    background-color: #f5f5f5;
+    color: variables.$darkGreyColor;
 
     .control-btn{
         width: fit-content;
     }
 
-    .custom-wrapper{
-        padding: 0;
-    }
-
     article{
         display: grid;
-        margin: 0 6vw 2em;
+        margin-bottom: 2em;
         transform: translateY(2em);
         opacity: 0;
-        background-color: white;
+        background-color: rgb(255, 255, 255);
         box-shadow: 1px 3px 6px rgb(226, 226, 226);
     }
     img{
@@ -71,6 +66,10 @@
             grid-template-areas: "desc img";
             background-color: transparent;
             box-shadow: none;
+
+            &:nth-child(2){
+                grid-template-areas: "img desc";
+            }
         }
 
         img{
@@ -79,6 +78,7 @@
 
         .description{
             grid-area: desc;
+            padding: 1em 2em;
         }
     }
 }

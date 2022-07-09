@@ -1,7 +1,10 @@
 @use 'variables';
 
 .main-header{
+    text-align: center;
     position: relative;
+    background: conic-gradient(#4852b1, #72438d, #4852b1);
+    color: rgb(255, 255, 255);
     .custom-shape-divider-bottom-1651637066 {
         position: absolute;
         bottom: 0;
@@ -9,7 +12,6 @@
         width: 100%;
         overflow: hidden;
         line-height: 0;
-        z-index: -1;
     }
     .custom-shape-divider-bottom-1651637066 svg {
         position: relative;
@@ -19,43 +21,32 @@
         transform: rotateY(180deg);
     }
     .custom-shape-divider-bottom-1651637066 .shape-fill {
-        fill: #FAFAFA;
+        fill: #f5f5f5;
     }
 
     h1{
-        margin-top: .5em;
+        width: fit-content;
+        margin: 1em auto 0;
         font-family: 'Oswald', sans-serif;
         font-weight: 700;
         line-height: 120%;
-        font-size: min(calc(3rem + 3vw), 5rem);
+        font-size: min(calc(4rem + 3vw), 6rem);
         clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
         position: relative;
-        &::before{
-            position: absolute;
-            content: '';
-            height: 5px;
-            width: 1.235em;
-            background-image: variables.$gradientColor;
-            bottom: 0;
-            left: 6px;
-        }
     }
 
     nav{
         margin-top: 1em;
-        margin-bottom: 1em;
+        margin-bottom: 4em;
     }
 
     a{
+        color: white;
         opacity: 0;
-        margin-right: 2em;
+        margin: 0 .5em;
         &:hover{
             font-style: italic;
             position: relative;
-            &::before{
-                content: '.::';
-                color: #1CA7EC;
-            }
         }
     }
 }

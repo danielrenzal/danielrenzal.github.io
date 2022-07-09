@@ -3,9 +3,14 @@
 footer{
     background-color: white;
     color: variables.$darkGreyColor;
-    font-size: .875rem;
+
+    .custom-wrapper{
+        padding-bottom: 1em;
+    }
 
     form{
+        max-width: 50em;
+        margin: auto;
         text-align: left;
         display: grid;
 
@@ -34,14 +39,15 @@ footer{
 
         .error-email, .error-subj, .error-msg{
             display: none;
-            font-size: 15px;
-            color: rgb(255, 184, 152);
+            font-size: 14px;
+            color: rgb(214, 57, 9);
             font-style: italic;
         }
     }
 
     .credit{
-        margin-top: 2em;
+        margin-top: clamp(2em, 6vw, 4em);
+        text-align: center;
     }
     
 }

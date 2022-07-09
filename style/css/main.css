@@ -8,7 +8,7 @@
 
 a {
   text-decoration: none;
-  color: #1f1f1f;
+  color: #272727;
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
 }
@@ -20,8 +20,8 @@ ul {
 }
 
 .custom-wrapper {
-  max-width: 75em;
-  margin: auto;
+  max-width: 85em;
+  margin: 0 auto;
   padding: 2.5em 6vw;
 }
 
@@ -29,7 +29,7 @@ h2 {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   margin-bottom: 0.5em;
-  font-size: 2rem;
+  font-size: 2.5rem;
   position: relative;
 }
 h2::before {
@@ -37,17 +37,20 @@ h2::before {
   content: "";
   height: 3px;
   width: 1.5em;
-  background-image: linear-gradient(to bottom right, #38c9c9, #1CA7EC);
+  background-image: linear-gradient(to right, #4852b1, #72438d);
   bottom: 0;
 }
 
 @media (min-width: 1024px) {
   .custom-wrapper {
-    padding: 3.5em 6vw;
+    padding: 4.5em 6vw;
   }
 }
 .main-header {
+  text-align: center;
   position: relative;
+  background: conic-gradient(#4852b1, #72438d, #4852b1);
+  color: rgb(255, 255, 255);
 }
 .main-header .custom-shape-divider-bottom-1651637066 {
   position: absolute;
@@ -56,7 +59,6 @@ h2::before {
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  z-index: -1;
 }
 .main-header .custom-shape-divider-bottom-1651637066 svg {
   position: relative;
@@ -66,60 +68,45 @@ h2::before {
   transform: rotateY(180deg);
 }
 .main-header .custom-shape-divider-bottom-1651637066 .shape-fill {
-  fill: #FAFAFA;
+  fill: #f5f5f5;
 }
 .main-header h1 {
-  margin-top: 0.5em;
+  width: fit-content;
+  margin: 1em auto 0;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   line-height: 120%;
-  font-size: min(3rem + 3vw, 5rem);
+  font-size: min(4rem + 3vw, 6rem);
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
   position: relative;
 }
-.main-header h1::before {
-  position: absolute;
-  content: "";
-  height: 5px;
-  width: 1.235em;
-  background-image: linear-gradient(to bottom right, #38c9c9, #1CA7EC);
-  bottom: 0;
-  left: 6px;
-}
 .main-header nav {
   margin-top: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 4em;
 }
 .main-header a {
+  color: white;
   opacity: 0;
-  margin-right: 2em;
+  margin: 0 0.5em;
 }
 .main-header a:hover {
   font-style: italic;
   position: relative;
 }
-.main-header a:hover::before {
-  content: ".::";
-  color: #1CA7EC;
-}
 
 .projects {
-  background-color: #FAFAFA;
-  padding-top: 1.25em;
-  padding-bottom: 6vw;
+  background-color: #f5f5f5;
+  color: #272727;
 }
 .projects .control-btn {
   width: fit-content;
 }
-.projects .custom-wrapper {
-  padding: 0;
-}
 .projects article {
   display: grid;
-  margin: 0 6vw 2em;
+  margin-bottom: 2em;
   transform: translateY(2em);
   opacity: 0;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   box-shadow: 1px 3px 6px rgb(226, 226, 226);
 }
 .projects img {
@@ -148,15 +135,15 @@ h2::before {
 .projects .buttons-container a {
   padding: 0.5em 1em;
   margin-right: 1em;
-  background-color: #1f1f1f;
+  background-color: #272727;
   font-size: 0.875rem;
   color: white;
   border-radius: 5px;
 }
 .projects .buttons-container a:nth-child(2) {
   background-color: transparent;
-  border: 2px solid #1f1f1f;
-  color: #1f1f1f;
+  border: 2px solid #272727;
+  color: #272727;
 }
 
 @media (min-width: 860px) {
@@ -166,15 +153,19 @@ h2::before {
     background-color: transparent;
     box-shadow: none;
   }
+  .projects article:nth-child(2) {
+    grid-template-areas: "img desc";
+  }
   .projects img {
     grid-area: img;
   }
   .projects .description {
     grid-area: desc;
+    padding: 1em 2em;
   }
 }
 .about-contact {
-  background-color: #1f1f1f;
+  background-color: #272727;
   color: white;
 }
 .about-contact .about-me .about-info {
@@ -190,9 +181,10 @@ h2::before {
   text-align: center;
   flex-wrap: wrap;
   align-items: flex-end;
+  margin-bottom: 1em;
 }
 .about-contact .what-i-know ul li {
-  margin-top: 1em;
+  margin-top: 0.875em;
   margin-right: 1em;
   margin-left: 0;
 }
@@ -210,6 +202,9 @@ h2::before {
 }
 
 @media (min-width: 768px) {
+  .about-me .about-info {
+    margin-bottom: 5em;
+  }
   .about-me .what-i-know {
     text-align: right;
   }
@@ -219,14 +214,19 @@ h2::before {
   .about-me .what-i-know ul li {
     margin-right: 0;
     margin-left: 1em;
+    margin-top: 0;
   }
 }
 footer {
   background-color: white;
-  color: #1f1f1f;
-  font-size: 0.875rem;
+  color: #272727;
+}
+footer .custom-wrapper {
+  padding-bottom: 1em;
 }
 footer form {
+  max-width: 50em;
+  margin: auto;
   text-align: left;
   display: grid;
 }
@@ -238,26 +238,27 @@ footer form input, footer form textarea {
   border: none;
   padding: 0.5em;
   font-size: 0.875rem;
-  color: #1f1f1f;
+  color: #272727;
   border-radius: 2px;
   background-color: rgb(233, 233, 233);
   width: 100%;
 }
 footer form .submit-email {
   margin-top: 2em;
-  background-image: linear-gradient(to bottom right, #38c9c9, #1CA7EC);
+  background-image: linear-gradient(to right, #4852b1, #72438d);
   color: white;
   font-weight: 700;
   cursor: pointer;
 }
 footer form .error-email, footer form .error-subj, footer form .error-msg {
   display: none;
-  font-size: 15px;
-  color: rgb(255, 184, 152);
+  font-size: 14px;
+  color: rgb(214, 57, 9);
   font-style: italic;
 }
 footer .credit {
-  margin-top: 2em;
+  margin-top: clamp(2em, 6vw, 4em);
+  text-align: center;
 }
 
 @media (min-width: 600px) {
