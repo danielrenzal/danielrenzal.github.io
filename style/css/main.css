@@ -54,7 +54,7 @@ h2::before {
 }
 .main-header .custom-shape-divider-bottom-1651637066 {
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -148,7 +148,7 @@ h2::before {
 
 @media (min-width: 860px) {
   .projects article {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 50%;
     grid-template-areas: "desc img";
     background-color: transparent;
     box-shadow: none;
@@ -171,6 +171,7 @@ h2::before {
 .about-contact .about-me .about-info {
   max-width: 70ch;
   text-align: left;
+  margin-bottom: 3em;
 }
 .about-contact .about-me .about-info p {
   margin-bottom: 1em;
